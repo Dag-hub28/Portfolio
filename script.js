@@ -38,3 +38,40 @@ function animateSkills(){
   });
 }
 window.addEventListener('load', animateSkills);
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+if(contactForm){
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!formStatus) return;
+
+    formStatus.textContent = 'Sending your message...';
+    formStatus.style.display = 'block';
+    formStatus.style.color = '#333';
+
+    const formData = new FormData(contactForm);
+    fetch('https://formsubmit.co/ajax/dauglasnyongesa1@gmail.com', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => response.json())
+      .then(data => {
+        if(data.success === 'Thank you for your message!'){
+          formStatus.textContent = '✓ Message sent successfully! Thank you.';
+          formStatus.style.color = '#27ae60';
+          contactForm.reset();
+        } else {
+          throw new Error(data.message || 'Unknown response');
+        }
+      }).catch(error => {
+        formStatus.textContent = '✗ Something went wrong. Please try again or email me directly.';
+        formStatus.style.color = '#e74c3c';
+        console.error('Form submit error:', error);
+      });
+  });
+}
+
+

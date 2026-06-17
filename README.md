@@ -1,6 +1,6 @@
-# Portfolio — Dauglas Nyongesa
+# Dauglas Nyongesa
 
-This is a minimal static portfolio scaffold created for Dauglas Nyongesa. It includes the main sections: Home, About, Skills, Projects, Experience, Contact.
+This is a minimal static website created for Dauglas Nyongesa. It includes the main sections: Home, About, Skills, Projects, Experience, Contact.
 
 How to preview:
 

@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dauglas Nyongesa — Portfolio</title>
+  <title>Dauglas Nyongesa</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/jpeg" href="assets/WhatsApp Image 2025-10-21 at 22.07.33_373c7b54.jpg">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
   <link rel="apple-touch-icon" href="assets/WhatsApp Image 2025-10-21 at 22.07.33_373c7b54.jpg">
   <meta name="theme-color" content="#0f1724">
 </head>
@@ -34,7 +35,7 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Welcome to my portfolio</p>
+          <p class="eyebrow">Welcome to Dauglas Nyongesa</p>
           <h1>I'm <span class="accent">Dauglas Nyongesa</span></h1>
           <h2 class="role">Database Specialist & Full-Stack Developer</h2>
           <p class="lead">Passionate about building reliable systems, databases, and impactful web applications. I focus on turning ideas into production-ready solutions.</p>
@@ -61,8 +62,8 @@
           <div>
             <h3>Education</h3>
             <ul class="meta-list">
-              <li><strong>Computer Science</strong> — Karatina University (2022 – Present)</li>
-              <li><strong>Kolanya Boys High</strong> — Secondary (2018 – 2021)</li>
+              <li><strong>Computer Science</strong> - Karatina University (2022 - Present)</li>
+              <li><strong>Kolanya Boys High</strong> - Secondary (2018 - 2021)</li>
             </ul>
           </div>
           <div>
@@ -127,13 +128,13 @@
             <a class="project-link" href="#contact">View details</a>
           </article>
           <article class="project">
-            <h3>Personal Portfolio Website</h3>
-            <p>Modern responsive portfolio website showcasing professional profile, skills, and projects.</p>
+            <h3>Personal Website</h3>
+            <p>Modern responsive website showcasing professional profile, skills, and projects.</p>
             <a class="project-link" href="#contact">View details</a>
           </article>
           <article class="project">
-            <h3>GitHub Pages Portfolio</h3>
-            <p>Personal portfolio website built with HTML, CSS, and JavaScript for online presence.</p>
+            <h3>GitHub Pages Website</h3>
+            <p>Personal website built with HTML, CSS, and JavaScript for online presence.</p>
             <a class="project-link" href="#contact">View details</a>
           </article>
           <article class="project">
@@ -143,7 +144,7 @@
           </article>
           <article class="project">
             <h3>Dagfinne</h3>
-            <p>Additional portfolio project demonstrating web development and deployment skills.</p>
+            <p>Additional project demonstrating web development and deployment skills.</p>
             <a class="project-link" href="#contact">View details</a>
           </article>
           <article class="project">
@@ -197,13 +198,16 @@
           </div>
         </div>
 
-        <form class="card contact-form" onsubmit="event.preventDefault(); alert('Message sent (demo)');">
+        <form class="card contact-form" id="contactForm" action="https://formsubmit.co/dauglasnyongesa1@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from Dauglas Nyongesa website">
+          <input type="hidden" name="_captcha" value="false">
           <h3>Send Me a Message</h3>
-          <label> Your Name <input name="name" placeholder="John Doe"></label>
-          <label> Your Email <input name="email" placeholder="john@example.com"></label>
-          <label> Subject <input name="subject" placeholder="Project Inquiry"></label>
-          <label> Your Message <textarea name="message" placeholder="Hello Dauglas, I'd like to discuss a project..."></textarea></label>
+          <label> Your Name <input name="name" placeholder="John Doe" required></label>
+          <label> Your Email <input name="email" placeholder="john@example.com" required type="email"></label>
+          <label> Subject <input name="subject" placeholder="Project Inquiry" required></label>
+          <label> Your Message <textarea name="message" placeholder="Hello Dauglas, I'd like to discuss a project..." required></textarea></label>
           <button class="btn primary" type="submit">Send Message</button>
+          <p id="formStatus" style="margin-top:10px; display:none;"></p>
         </form>
       </div>
     </section>
