@@ -1,0 +1,9 @@
+{
+  "name": "dauglas-nyongesa-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "nodemailer": "^6.9.3"
+  }
+}
